@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister">
+
+
+<head><!-- 네이버 지도 api를 위한 값이며 고유id 키값이 있어야 api를 사용할 수 있다. -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=jCIhzruMw2WhFIpB3oEI&submodules=geocoder"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top menu -->
+
+<div class="w3-top">
+  <div class="w3-xlarge" id="titlemenu">
+
+    <div><!-- 메뉴바 안에 입력되어 있는 메뉴목록-->
+      <div class="w3-bar-block w3-card w3-animate-top dropdown-content" id="topMenu">
+        <button onclick="closeTopMenu()" class="w3-bar-item w3-large">&times; Close</button>
+        <a href="#introduction">Introduction</a>
+        <a href="#history">Histroy Table</a>
+        <a href="#spec">Specification</a>
+        <a href="#gallary">Gallary</a>
+        <a href="#buyit">Buy it</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+        <!--메뉴를 나타내주는 메뉴버튼을 위한 값 -->
+        <button class="w3-button w3-xlarge w3-left dropbtn" onclick="openTopMenu()">&#9776;</button>
+        <!-- 맨 위의 타이틀 메뉴이며 콜라보를 연상시키기 위해 x 자의 사진을 첨부하였고 지씨컴퍼니에서 제작한 마우스를 나타냄 -->
+      <div class="w3-center" id="title"> GC COMPNAY <span> <img class="colabo" src="axe.jpg" alt=""> </span> INFINITY MOUSE </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 실제로 모든 페이지의 콘텐츠들이 출력되는 div 임 -->
+<div class="w3-main w3-content w3-padding" id="contmenu">
+  <div class="mycompany"><!-- 회사소개부분을 ppt의 summary 의 부분으로 표시하였다. -->
+        <p class="contname"><a name="introduction"></a>회사 소개</p>
+        <img id="회사사진"src="companyintro.jpg" alt="">
+    <p class="contname"><a name="history"></a>회사 연혁</p>
+    <div class="wrap1">
+      <div class="ceo">
+        <p> <img id="ceopicture" src="representative.jpg" alt="대표 김철진"><br><br>GC COMPANY 대표 김철진</p>
+      </div><!-- 회사연혁을 나타내며 span 처리하여 각각의 속성에 값을 주었다. -->
+      <div class="">
+        <p id="회사연혁"><span id="날짜">2017.09月</span> <br> - START-UP 회사설립</p>
+        <p id="회사연혁"><span id="날짜">2017.09月</span> <br> - 슈퍼루키 창업 프로젝트 선정</p>
+        <p id="회사연혁"><span id="날짜">2017.10月</span> <br> - GC COMPANY 마우스 라인업</p>
+        <p id="회사연혁"><span id="날짜">2017.11月</span> <br> - INFINITY 마우스 시제품 제작 완료</p>
+      </div>
+    </div>
+    <a name="spec"></a>
+  </div><!-- 제품요구사항을 나타내기위한 div 이며 사진 옆에 간단한 요구사항과 성능부분을 나타내었다. -->
+<p class="contname">제품 성능 & 요구사항</p>
+
+<div class="wrap1">
+  <div >
+    <img class="spcepicture" src="mousespec.jpg" alt="">
+  </div>
+  <div class="specintro">
+    <p>- 무선 소형 광마우스</p>
+    <p>- 8x4.4x2.5(cm)</p>
+    <p>- Windows,Linux 등 전 모델 호환</p>
+    <p>- Unifying 수신기</p>
+    <p>- Micro 5Pin 충전식 배터리</p>
+  </div>
+
+</div>
+
+<a name="gallary">
+<p class="contname"></a>갤러리</p>
+
+  <!-- 사진을 표시해주며 각각의 칸에 3장의 사진을 2줄에 표현하여 총 6개의 제품 사진을 전시하였다. 6개사진을 위한 css 는 동일!!!-->
+  <div class="w3-row-padding"><!-- 3장의 사진만 크기에 맞게 나타나도록 설정해주는 class 6개사진을 위한 css 는 동일!!! rowpadding은 옆사이드 container는 위 아래 third는 높이 %-->
+    <div class="w3-container w3-third">
+      <img src="redblack.jpg" id="mousepict"
+      onclick="document.getElementById('id01').style.display='block'" class="w3-hover-opacity">RED BALCK
+    </div><!-- 클릭하면 나타나도록 해주며 각 마우스 사진의 크기를 설정해준다.6개사진을 위한 css 는 동일!!! -->
+    <div class="w3-container w3-third">
+      <img src="edge white.jpg" id="mousepict"
+      onclick="document.getElementById('id02').style.display='block'" class="w3-hover-opacity">EDGE WHITE
+    </div>
+    <div class="w3-container w3-third">
+      <img src="grayblack.jpg" id="mousepict"
+      onclick="document.getElementById('id03').style.display='block'" class="w3-hover-opacity">GRAY BLACK
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-container w3-third">
+      <img src="Mohicanblue.jpg" id="mousepict"
+      onclick="document.getElementById('id04').style.display='block'" class="w3-hover-opacity">MOHICAN BLUE
+    </div>
+    <div class="w3-container w3-third">
+      <img src="redwhite.jpg" id="mousepict"
+      onclick="document.getElementById('id05').style.display='block'" class="w3-hover-opacity">RED WHITE
+    </div>
+    <div class="w3-container w3-third">
+      <img src="smokeblack.jpg" id="mousepict"
+      onclick="document.getElementById('id06').style.display='block'" class="w3-hover-opacity">SMOKE BLACK
+    </div>
+  </div>
+
+<!-- 아래의 div 6개는 modal을 표현하고 안의 텍스트를 표현하기 위한 값 6개사진을 위한 css 는 동일!!!-->
+<div id="id01" class="w3-modal" onclick="document.getElementById('id01').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <!-- x버튼을 나타내주며 호버를 하면 빨간색이며 오른쪽 위에 나타나도록 해준다. 6개사진을 위한 css 는 동일!!!-->
+  <div class="modalcon w3-animate-zoom">
+      <img src="redblack.jpg" id="모달창">
+      <p class="modaltext">본체는 검은색으로 고급스럽게 제작하였으며 <br>밴드를 빨간색으로 처리하여 더욱 고급스러운 느낌을 주는 제품.</p>
+  </div>
+</div>
+
+<div id="id02" class="w3-modal" onclick="document.getElementById('id02').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="modalcon w3-animate-zoom">
+    <img src="edge white.jpg"  id="모달창">
+    <p class="modaltext">본체는 흰색으로 심플하게 제작하였으며 <br>밴드는 흰색, 클릭부분을 엣지 처리하여 깨끗한 느낌을 주는 제품.</p>
+  </div>
+</div>
+
+<div id="id03" class="w3-modal" onclick="document.getElementById('id03').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="modalcon w3-animate-zoom">
+    <img src="grayblack.jpg"  id="모달창">
+    <p class="modaltext">본체는 회색으로 모던스럽게 제작하였으며 <br> 밴드는 검은색으로 처리하여 더욱 모던한 느낌을 주는 제품.</p>
+  </div>
+</div>
+
+<div id="id04" class="w3-modal" onclick="document.getElementById('id04').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="modalcon w3-animate-zoom">
+    <img src="Mohicanblue.jpg"  id="모달창">
+    <p class="modaltext">본체는 파랑색으로 색변화를 주었으며 <br> 밴드도 마찬가지로 조금 연한 파랑색을 사용함으로서 <br> 10~20대 매니아층을 겨냥한 제품.</p>
+  </div>
+</div>
+
+<div id="id05" class="w3-modal" onclick="document.getElementById('id05').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="modalcon w3-animate-zoom">
+    <img src="redwhite.jpg"  id="모달창">
+    <p class="modaltext">본체는 흰색으로 심플한 느낌을 주면서 동시에 빨간색으로 <br> 밴드처리를 하여 심플하고 고급스러움을 동시에 표현해주는 제품.</p>
+  </div>
+</div>
+
+<div id="id06" class="w3-modal" onclick="document.getElementById('id06').style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="modalcon w3-animate-zoom">
+    <img src="smokeblack.jpg"  id="모달창">
+    <p class="modaltext">본체 밴드 두 부분 모두 블랙느낌으로 고급스러움을 보여주면서 <br>직장인 비지니스맨들의 깔끔함과 조화되는 제품.</p>
+  </div>
+</div>
+
+<!-- 이 제품을 판매하는 곳을 연결하여 판매할 수 있도록 하기 위함 -->
+  <a name="buyit"></a>
+  <div class="wrap1">
+    <div class="buyit">
+      <p class="contname">Buy Infinity Mouse!</p>
+      <a href="http://www.gmarket.co.kr/" target="_blank"><img class="openmarket" src="gmarket.jpg" alt=""></a>
+      <a href="http://www.11st.co.kr" target="_blank"><img class="openmarket" src="11st.jpg" alt=""></a>
+      <a href="http://www.auction.co.kr/" target="_blank"><img class="openmarket" src="auction.jpg" alt=""></a>
+    </div>
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fglobalchang%2F&tabs=timeline&width=400&height=400&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+    width="400" height="400" id="facewin" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</div>
+<!-- 네이버 지도 api를 이용하여서 회사 주소로 찾아올 수 있도록 알림 -->
+  <div>
+    <p class="contname"><a name="buyit"></a><a name="contact"></a>찾아오시는 길</p>
+    <div id="map"></div>
+  </div>
+
+
+  <!-- post한 사람의 내용과 이메일을 누르면 연결이 되도록 설정 -->
+  <footer id="풋터"class="w3-row-padding w3-padding-32">
+    Posted by: ChungNamNationalUniversity, 201102588, Cheol-jin Kim <br>
+    Contact information: <a href="mailto:gccomp@naver.com">gccomp@naver.com</a>.
+  </footer>
+
+
+</div>
+
+<script>
+<!-- 메뉴바를 누르면 왼쪽에서 나오도록 애니메이션 처리하였다. -->
+function openTopMenu() {
+    document.getElementById("topMenu").style.display = "block";
+}
+function closeTopMenu() {
+    document.getElementById("topMenu").style.display = "none";
+}
+<!-- 네이버api 이며 위도경도를 이용하여 위치를 지정하고 줌을 이용해서 확대되는 부분을 설정할 수 있다. -->
+var HOME_PATH = window.HOME_PATH || '.';
+var gccomp = new naver.maps.LatLng(36.36216460000001,127.3479016),
+    map = new naver.maps.Map('map', {
+        center: gccomp,
+        zoom: 20
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: gccomp
+    });
+<!-- 지도에 표시될때 지도안의 칸에서 출력되는 부분으로 주소, 전화번호, 업태, 종목을 나타내며 마지막에 홈페이지 주소를 나타내었다. -->
+var contentString = [
+        '<div class="iw_inner">',
+        '   <h3>글로벌창 GC COMPANY</h3>',
+        '   <p>대전광역시 유성구 궁동 414-14 꿈이있는곳<br />',
+        '       010-1223-5532 | 제조업, 소형 마우스<br />',
+        '       <a href="http://cheoljin2.github.io" target="_blank">www.gccompany.co.kr/</a>',<!-- 실제 사용하고 있는 주소는 아니며 임시주소 -->
+        '   </p>',
+        '</div>'
+    ].join('');
+<!-- 네이버의 콘텐츠를 담기위한 지도위에 box로 사이즈와 포인트 그리고 네이버 색인 초록색으로 나타내주기 위한 속성이다. -->
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    maxWidth: 140,
+    backgroundColor: "#eee",
+    borderColor: "#2db400",
+    borderWidth: 5,
+    anchorSize: new naver.maps.Size(30, 30),
+    anchorSkew: true,
+    anchorColor: "#eee",
+    pixelOffset: new naver.maps.Point(20, -20)
+});
+<!-- 네이버 지도위에 표시된 위치를 클릭하면 box가 출력된다. -->
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+</script>
+</body>
+</html>
